@@ -18,14 +18,14 @@ class CreateRegionsTable extends Migration
             $table->string('name_uz');
             $table->string('name_ru');
             $table->string('name_en');
-            $table->string('poster',500);
-            $table->text('full_text_uz');
-            $table->text('full_text_ru');
-            $table->text('full_text_en');
+            $table->string('poster',500)->nullable();
+            $table->text('full_text_uz')->nullable();
+            $table->text('full_text_ru')->nullable();
+            $table->text('full_text_en')->nullable();
             $table->string('slug');
-            $table->string('descr');
-            $table->string('keywords');
-            $table->integer('moder');
+            $table->string('descr')->nullable();
+            $table->string('keywords')->nullable();
+            $table->integer('moder')->default(1);
             $table->timestamps();
         });
     }

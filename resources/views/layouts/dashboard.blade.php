@@ -14,7 +14,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <meta name="author" content="">
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="/vendor/admin/plugins/images/favicon.png">
-    <title>@lang('admin.title')</title>
+    <title>@yield('title_head')@lang('admin.title')</title>
     <!-- Bootstrap Core CSS -->
     <link href="/vendor/admin/html/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Menu CSS -->
@@ -72,12 +72,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <!-- Left navbar-header -->
     <div class="navbar-default sidebar" role="navigation">
         <div class="sidebar-nav navbar-collapse slimscrollsidebar">
+
             <ul class="nav" id="side-menu">
                 <li style="padding: 10px 0 0;">
-                    <a href="index.html" class="waves-effect"><i class="fa fa-clock-o fa-fw" aria-hidden="true"></i><span class="hide-menu">@lang('admin.home')</span></a>
+                    <a href="{{Route('dashboard',['ru'])}}" class="waves-effect"><i class="fa fa-clock-o fa-fw" aria-hidden="true"></i><span class="hide-menu">@lang('admin.home')</span></a>
                 </li>
                 <li class="active">
-                    <a href="profile.html" class="waves-effect"><i class="fa fa-globe fa-fw" aria-hidden="true"></i><span class="hide-menu">@lang('admin.regions')</span></a>
+                    <a href="{{Route('regions_d',['ru'])}}" class="waves-effect"><i class="fa fa-globe fa-fw" aria-hidden="true"></i><span class="hide-menu">@lang('admin.regions')</span></a>
                 </li>
                 <li>
                     <a href="basic-table.html" class="waves-effect"><i class="fa fa-bed fa-fw" aria-hidden="true"></i><span class="hide-menu">@lang('admin.hotels')</span></a>
@@ -89,8 +90,17 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <a href="map-google.html" class="waves-effect"><i class="fa fa-camera-retro fa-fw" aria-hidden="true"></i><span class="hide-menu">@lang('admin.dist')</span></a>
                 </li>
 
-                <li>
-                    <a href="map-google.html" class="waves-effect"><i class="fa fa-cogs fa-fw" aria-hidden="true"></i><span class="hide-menu">@lang('admin.settings')</span></a>
+
+                <li class="">
+                    <a href="#" class="waves-effect">
+                        <i data-icon="7" class="fa fa-cogs fa-fw"></i> <span class="hide-menu">@lang('admin.settings')<span class="fa arrow"></span></span>
+                    </a>
+                    <ul class="nav nav-second-level collapse" aria-expanded="false" style="height: 0px;">
+                        <li> <a href="fontawesome.html"><i class="fa fa-cog fa-fw"></i>  @lang('admin.settings')</a> </li>
+                        <li> <a href="themifyicon.html"><i class="fa fa-facebook-official fa-fw"></i> @lang('admin.fb')</a> </li>
+                        <li> <a href="simple-line.html"><i class="fa fa-instagram fa-fw"></i>  @lang('admin.instagram')</a> </li>
+                        <li><a href="linea-icon.html"><i class="fa fa-youtube-square fa-fw"></i> @lang('admin.youtube')</a></li>
+                    </ul>
                 </li>
             </ul>
         </div>
@@ -122,6 +132,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <script src="/vendor/admin/html/js/waves.js"></script>
 <!-- Custom Theme JavaScript -->
 <script src="/vendor/admin/html/js/custom.min.js"></script>
+
+@stack('js')
 </body>
 
 </html>

@@ -16,6 +16,7 @@ class IndexCtrl extends Controller
         $hotels = Hotel::all()->count();
         $res = Restaurant::all()->count();
         $dis = Distinction::all()->count();
-        return view('dashboard.index',compact('hotels','res','dis'));
+        $regions = Region::latest('id')->get();
+        return view('dashboard.index',compact('hotels','res','dis','regions'));
     }
 }
