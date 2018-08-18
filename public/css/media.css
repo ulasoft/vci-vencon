@@ -314,6 +314,9 @@
 	.box-shadow img:hover {
 		transform: scale(1.2);
 	}
+	.j-column:hover .box-shadow img {
+		transform: scale(1.2);
+	}
 	.i1 a:hover {
 		color: #D72727;
 	}

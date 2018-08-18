@@ -16,6 +16,8 @@ return [
     'instagram' => 'Instagram',
     'youtube' => 'YouTube',
     'fb' => 'Facebook',
+    'moree' => 'More',
+    'other_regions' => 'Other regions',
     'slide' => [
         'welcome' => 'Welcome to UZBEKISTAN!',
         'bukhara' => 'Bukhara is an ancient Uzbek city through which the Great Silk Road.',

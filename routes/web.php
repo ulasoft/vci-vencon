@@ -16,13 +16,18 @@ Auth::routes();
 Route::get('/', 'Site\IndexCtrl@index')->middleware('lang');
 
 Route::group(['prefix' => '{lang}'],function() {
+
     Route::prefix('/')->group(function(){
         Route::get('/', 'Site\IndexCtrl@index');
         Route::get('hotels','Site\HotelsCtrl@index')->name('hotels');
+        Route::prefix('regions')->group(function(){
+           Route::get('/','Site\RegionsCtrl@index')->name('regions');
+           Route::get('/{slug}','Site\RegionsCtrl@view')->name('regions_view');
+        });
     });
 
-    Route::get('/home', 'HomeController@index')->name('home');
 
+    Route::get('/home', 'HomeController@index')->name('home');
 
     Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
     Route::group(['prefix' => 'dashboard', 'middleware' => 'admin'],function(){
@@ -68,15 +73,6 @@ Route::group(['prefix' => '{lang}'],function() {
             Route::post('/add','Dashboard\SettingsCtrl@update');
 
         });
-
-
-
-
-
     });
-
-
-
-
 
 });

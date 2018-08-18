@@ -805,7 +805,7 @@ figure.effect-steve p {
 	font-weight: bold;
 	display: block;
 	width: 100%;
-	border-bottom: 2px solid #ddd;
+	border-top: 2px solid #ddd;
 }
 
 .sidebar ul li a span {
