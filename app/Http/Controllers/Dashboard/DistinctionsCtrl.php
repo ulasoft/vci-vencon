@@ -34,6 +34,7 @@ class DistinctionsCtrl extends Controller
         $h->keywords = Str_replace(' ',',',mb_substr(strip_tags($req->full_text),0,250));
         $h->moder = 1;
         $h->lang = $req->lang;
+        $h->address = $req->address;
         $h->save();
 
         $req->session()->flash('status', trans('admin.success_add'));
@@ -59,6 +60,7 @@ class DistinctionsCtrl extends Controller
         $h->descr = mb_substr(strip_tags($req->full_text),0,250);
         $h->keywords = Str_replace(' ',',',mb_substr(strip_tags($req->full_text),0,250));
         $h->moder = 1;
+        $h->address = $req->address;
         $h->lang = $req->lang;
         $h->save();
 

@@ -22,6 +22,7 @@ class CreateDistinctionsTable extends Migration
             $table->string('descr',500)->nullable();
             $table->string('keywords',500)->nullable();
             $table->string('lang',3);
+            $table->string('address',500)->nullable();
             $table->integer('moder')->default(0);
             $table->timestamps();
         });

@@ -32,6 +32,7 @@ class HotelsCtrl extends Controller
         $h->descr = mb_substr(strip_tags($req->full_text),0,250);
         $h->keywords = Str_replace(' ',',',mb_substr(strip_tags($req->full_text),0,250));
         $h->moder = 1;
+        $h->address = $req->address;
         $h->lang = $req->lang;
         $h->save();
 
@@ -64,6 +65,7 @@ class HotelsCtrl extends Controller
         $h->descr = mb_substr(strip_tags($req->full_text),0,250);
         $h->keywords = Str_replace(' ',',',mb_substr(strip_tags($req->full_text),0,250));
         $h->moder = 1;
+        $h->address = $req->address;
         $h->lang = $req->lang;
         $h->save();
 

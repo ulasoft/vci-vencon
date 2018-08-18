@@ -17,6 +17,7 @@ return [
     'youtube' => 'YouTube',
     'fb' => 'Facebook',
     'moree' => 'More',
+    'address' => 'Address',
     'other_regions' => 'Other regions',
     'slide' => [
         'welcome' => 'Welcome to UZBEKISTAN!',

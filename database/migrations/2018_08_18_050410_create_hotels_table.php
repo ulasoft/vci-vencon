@@ -22,6 +22,7 @@ class CreateHotelsTable extends Migration
             $table->string('keywords')->nullable();
             $table->string('slug');
             $table->integer('moder')->default(0);
+            $table->string('address',500)->nullable();
             $table->string('lang');
             $table->timestamps();
         });

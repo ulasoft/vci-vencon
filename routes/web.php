@@ -20,12 +20,13 @@ Route::group(['prefix' => '{lang}'],function() {
     Route::prefix('/')->group(function(){
         Route::get('/', 'Site\IndexCtrl@index');
         Route::get('hotels','Site\HotelsCtrl@index')->name('hotels');
+        Route::get('restaurants','Site\RestaurantsCtrl@index')->name('restaurants');
+        Route::get('entertainments','Site\EntertainmentsCtrl@index')->name('entertainments');
         Route::prefix('regions')->group(function(){
            Route::get('/','Site\RegionsCtrl@index')->name('regions');
            Route::get('/{slug}','Site\RegionsCtrl@view')->name('regions_view');
         });
     });
-
 
     Route::get('/home', 'HomeController@index')->name('home');
 

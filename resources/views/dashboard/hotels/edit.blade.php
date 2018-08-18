@@ -25,6 +25,13 @@
                                     <div class="col-md-9">
                                         <textarea name="full_text" id="editor1">{{$data->full_text}}</textarea> <!--span class="help-block"> This is inline help </span--> </div>
                                 </div>
+
+                                <div class="form-group">
+                                    <label class="control-label col-md-3">@lang('admin.address')</label>
+                                    <div class="col-md-9">
+                                        <input type="text" required value="{{$data->address}}" name="address" class="form-control"> <!--span class="help-block"> This is inline help </span --> </div>
+                                </div>
+
                                 <div class="form-group">
                                     <label class="control-label col-md-3">@lang('admin.lang')</label>
                                     <div class="col-md-9">

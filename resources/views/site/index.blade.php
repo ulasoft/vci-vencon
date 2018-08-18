@@ -1,42 +1,24 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-
     <meta charset="utf-8">
-
     <title>Uzbekistan Test</title>
     <meta name="description" content="">
-
     <link rel="shortcut icon" href="/img/favicon/favicon.png">
-
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
     <link rel="stylesheet" href="/libs/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="/libs/swiper-slider/dist/css/swiper.min.css">
-
-
     <link rel="stylesheet" href="/css/fonts.css">
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/media.css">
     <link rel="stylesheet" href="/libs/animate/animate.min.css">
-
     <script src="/libs/modernizr/modernizr.js"></script>
-
 </head>
-
 <body>
-
-
-
-
 <div id="wrapper">
     <div id="toTop"> <i class="fa fa-chevron-up"></i> </div>
     <header>
-
-
-
         <div class="main-nav">
 
             <div class="container">
@@ -76,20 +58,13 @@
                             </div><!-- menu-icon -->
                         </a><!-- menu-toggle -->
                     </main><!-- main -->
-
                     <div id="brand">
                         <div class="logo">
-
                             <img src="/img/logo.png">
-
                         </div><!-- #logo -->
                     </div><!-- #brand -->
-
                     <div class="ssm-overlay ssm-toggle-nav"></div>
-
                 </div><!-- first -->
-
-
                 <div class="second">
                     <div class="not-responsive-nav">
                         <div class="container d-flex space-between">

@@ -23,6 +23,7 @@ class CreateRestaurantsTable extends Migration
             $table->string('keywords',500);
             $table->string('lang',3);
             $table->integer('moder')->default(0);
+            $table->string('address',500)->nullable();
             $table->timestamps();
         });
     }

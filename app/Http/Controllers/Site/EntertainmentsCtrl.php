@@ -5,15 +5,14 @@ namespace App\Http\Controllers\Site;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App;
-use App\Hotel;
+use App\Distinction;
 
-class HotelsCtrl extends Controller
+class EntertainmentsCtrl extends Controller
 {
     public function index($lang)
     {
         App::setLocale($lang);
-        $data = Hotel::latest('id')->paginate(10);
-
+        $data = Distinction::latest('id')->paginate(10);
         return view('site.hotels',compact('data'));
     }
 }
