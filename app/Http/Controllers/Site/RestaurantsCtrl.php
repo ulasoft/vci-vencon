@@ -12,7 +12,7 @@ class RestaurantsCtrl extends Controller
     public function index($lang)
     {
         App::setLocale($lang);
-        $data = Restaurant::latest('id')->paginate(10);
+        $data = Restaurant::latest('id')->where('lang', $lang)->paginate(10);
         return view('site.hotels',compact('data'));
     }
 }

@@ -27,24 +27,49 @@
                 <div class="first">
                     <div class="responsive-nav">
                         <div class="mobile-logo">
-                            <img src="/img/logo.png">
+                            <a href="/{{$lang}}">
+                                <img src="/img/logo.png">
+                            </a>
                         </div><!-- logo -->
                         <ul class="main-ul">
                             <li><a href="/{{$lang}}">@lang('s.home')</a></li>
                             <li><a href="{{Route('regions',[$lang])}}">@lang('s.regions')</a></li>
-                            <li><a href="hotels.html">@lang('s.hotels')</a></li>
-                            <li><a href="restaurants.html">@lang('s.restaurants')</a></li>
+                            <li><a href="{{Route('hotels',[$lang])}}">@lang('s.hotels')</a></li>
+                            <li><a href="{{Route('restaurants',[$lang])}}">@lang('s.restaurants')</a></li>
                             <span class="dropdown">
 									<a class="dropdown-toggle dropdown-link" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-										<img src="/img/eng.png" alt="eng" class="img-width">
+										<img src="/img/{{$lang}}.png" alt="eng" class="img-width">
 									</a>
 									<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-										<a class="dropdown-item animated fadeInRight" href="#"><img src="/img/rus.png" alt="rus" class="img-width"> РУС
-										</a>
-										<a class="dropdown-item animated fadeInLeft" href="#"><img src="/img/uzb.png" alt="uzb" class="img-width"> UZB
-										</a>
+                                        @if($lang == 'ru')
+                                            <a class="dropdown-item animated fadeInRight" href="/en">
+                                                <img src="/img/en.png" alt="en" class="img-width"> ENG
+                                            </a>
+
+                                            <a class="dropdown-item " href="/uz">
+                                                <img src="/img/uz.png" alt="uzb" class="img-width"> UZB
+                                            </a>
+                                        @endif
+                                        @if($lang == 'en')
+                                            <a class="dropdown-item animated fadeInRight" href="/ru">
+                                                    <img src="/img/ru.png" alt="ru" class="img-width"> РУС
+                                                </a>
+
+                                            <a class="dropdown-item " href="/uz">
+                                                    <img src="/img/uz.png" alt="uzb" class="img-width"> UZB
+                                                </a>
+                                        @endif
+                                        @if($lang == 'uz')
+                                            <a class="dropdown-item animated fadeInRight" href="/ru">
+                                                <img src="/img/ru.png" alt="ru" class="img-width"> РУС
+                                            </a>
+
+                                            <a class="dropdown-item animated fadeInRight" href="/en">
+                                                <img src="/img/en.png" alt="en" class="img-width"> ENG
+                                            </a>
+                                        @endif
 									</div>
-								</span><!-- dropdown -->
+                            </span><!-- dropdown -->
                         </ul><!-- main-ul -->
 
                     </div><!-- responsive-nav -->
@@ -59,7 +84,9 @@
                     </main><!-- main -->
                     <div id="brand">
                         <div class="logo">
-                            <img src="/img/logo.png">
+                            <a href="/{{$lang}}">
+                                <img src="/img/logo.png">
+                            </a>
                         </div><!-- #logo -->
                     </div><!-- #brand -->
                     <div class="ssm-overlay ssm-toggle-nav"></div>
@@ -68,23 +95,48 @@
                     <div class="not-responsive-nav">
                         <div class="container d-flex space-between">
                             <div class="d-flex logo">
-                                <img src="/img/logo.png">
+                                <a href="/{{$lang}}">
+                                    <img src="/img/logo.png">
+                                </a>
                             </div><!-- #logo -->
                             <ul class="desktop-ul d-flex">
-                                <li><a href="/{{Request::segment(1)}}">@lang('s.home')</a></li>
+                                <li><a href="/{{$lang}}">@lang('s.home')</a></li>
                                 <li><a href="{{Route('regions',[$lang])}}">@lang('s.regions')</a></li>
-                                <li><a href="hotels.html">@lang('s.hotels')</a></li>
-                                <li><a href="restaurants.html">@lang('s.restaurants')</a></li>
+                                <li><a href="{{Route('hotels',[$lang])}}">@lang('s.hotels')</a></li>
+                                <li><a href="{{Route('restaurants',[$lang])}}">@lang('s.restaurants')</a></li>
 
                                 <span class="dropdown">
 									<a class="dropdown-toggle dropdown-link" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-										<img src="/img/eng.png" alt="eng" class="img-width">
+										<img src="/img/{{$lang}}.png" alt="eng" class="img-width">
 									</a>
 									<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-										<a class="dropdown-item animated fadeInRight" href="#"><img src="/img/rus.png" alt="rus" class="img-width"> РУС
-										</a>
-										<a class="dropdown-item animated fadeInLeft" href="#"><img src="/img/uzb.png" alt="uzb" class="img-width"> UZB
-										</a>
+                                        @if($lang == 'ru')
+                                            <a class="dropdown-item animated fadeInRight" href="/en">
+                                                <img src="/img/en.png" alt="en" class="img-width"> ENG
+                                            </a>
+
+                                            <a class="dropdown-item " href="/uz">
+                                                <img src="/img/uz.png" alt="uzb" class="img-width"> UZB
+                                            </a>
+                                        @endif
+                                        @if($lang == 'en')
+                                                <a class="dropdown-item animated fadeInRight" href="/ru">
+                                                    <img src="/img/ru.png" alt="ru" class="img-width"> РУС
+                                                </a>
+
+                                                <a class="dropdown-item " href="/uz">
+                                                    <img src="/img/uz.png" alt="uzb" class="img-width"> UZB
+                                                </a>
+                                        @endif
+                                        @if($lang == 'uz')
+                                            <a class="dropdown-item animated fadeInRight" href="/ru">
+                                                <img src="/img/ru.png" alt="ru" class="img-width"> РУС
+                                            </a>
+
+                                            <a class="dropdown-item animated fadeInRight" href="/en">
+                                                <img src="/img/en.png" alt="en" class="img-width"> ENG
+                                            </a>
+                                        @endif
 									</div>
 								</span><!-- dropdown -->
                             </ul><!-- desktop-ul -->
@@ -101,35 +153,34 @@
         <div class="container-fluid pt-4 pb-4 bg">
             <div class="container">
                 <div class="col-md-12 mx-auto text-center">
-                    <p class="pt-3 pb-2 m-0">
+                    <p class="pt-3 pb-2 m-0 font-ula">
                         <span class="i1 wow flipInX" data-wow-offset="0" data-wow-delay="0.5s" data-wow-duration="1s">
                             <a href="https://www.youtube.com/" target="about">
-                                <i class="fab fa-youtube"></i>
+                                <i class="fa fa-youtube"></i>
                             </a>
                         </span>
                         <span class="i2 wow flipInX" data-wow-offset="0" data-wow-delay="0.2s" data-wow-duration="2s">
-                                <a href="https://vk.com/feed" target="about">
-                                    <i class="fab fa-vk"></i>
-                                </a>
-
+                            <a href="https://vk.com/feed" target="about">
+                                <i class="fa fa-vk"></i>
+                            </a>
                         </span>
                         <span class="i3 wow flipInX" data-wow-offset="0" data-wow-delay="0.2s" data-wow-duration="2s">
-                                <a href="https://www.facebook.com/" target="about">
-                                    <i class="fab fa-facebook-f"></i>
-                                </a>
+                            <a href="https://www.facebook.com/" target="about">
+                                <i class="fa fa-facebook"></i>
+                            </a>
                         </span>
                         <span class="i4 wow flipInX" data-wow-offset="0" data-wow-delay="0.5s" data-wow-duration="1s">
-                                <a href="https://www.instagram.com/" target="about">
-                                    <i class="fab fa-instagram pr-0"></i>
-                                </a>
+                            <a href="https://www.instagram.com/" target="about">
+                                <i class="fa fa-instagram pr-0"></i>
+                            </a>
                         </span>
                     </p>
                     <p class="m-0 pb-3">
-                        <a href="{{Request::segment(1)}}" class="footer-link"><span class="pp wow bounceInLeft" data-wow-offset="0">@lang('s.home')</span></a>
+                        <a href="/{{$lang}}" class="footer-link"><span class="pp wow bounceInLeft" data-wow-offset="0">@lang('s.home')</span></a>
                         <a href="{{Route('regions',[$lang])}}" class="footer-link wow bounceInLeft" data-wow-offset="0"><span class="pp">@lang('s.regions')</span></a>
-                        <a href="entertainment.html" class="footer-link"><span class="ppp wow bounceIn" data-wow-offset="0">@lang('s.entertainments')</span></a>
-                        <a href="hotels.html" class="footer-link wow bounceInRight" data-wow-offset="0"><span class="pp">@lang('s.hotels')</span></a>
-                        <a href="restaurants.html" class="footer-link wow bounceInRight" data-wow-offset="0"><span class="pp">@lang('s.restaurants')</span></a>
+                        <a href="{{Route('entertainments',[$lang])}}" class="footer-link"><span class="ppp wow bounceIn" data-wow-offset="0">@lang('s.entertainments')</span></a>
+                        <a href="{{Route('hotels',[$lang])}}" class="footer-link wow bounceInRight" data-wow-offset="0"><span class="pp">@lang('s.hotels')</span></a>
+                        <a href="{{Route('restaurants',[$lang])}}" class="footer-link wow bounceInRight" data-wow-offset="0"><span class="pp">@lang('s.restaurants')</span></a>
                     </p>
                 </div>
             </div>
@@ -137,8 +188,8 @@
         <div class="container-fluid p-0 bg11">
             <div class="container">
                 <p class="m-0 footer-p">
-                    <a href="#"><img src="/img/logo.png" class="img-width footer-logo" data-wow-offset="0"></a>
-                    <a href="https://usoft.uz/" target="about"><span class="float-right text1 pr-1"> <img src="/img/usoft.png" alt="usoft" class="img-width usoft wow rotateInDownRight" data-wow-offset="0"></span></a>
+                    <a href="/{{$lang}}"><img src="/img/logo.png" class="img-width footer-logo" data-wow-offset="0"></a>
+                    <a href="https://usoft.uz/" target="about"><span class="float-right text1 pr-1"> <img src="/img/usoft.png" alt="usoft" class="img-width usoft" data-wow-offset="0"></span></a>
                 </p>
             </div>
         </div>
@@ -155,5 +206,6 @@
     <script src="/libs/swipe-menu/jquery.slideandswipe.min.js"></script>
     <script src="/libs/wow/dist/wow.min.js"></script>
     <script src="/js/common.js"></script>
+    <link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css">
 </body>
 </html>

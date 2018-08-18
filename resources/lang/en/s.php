@@ -19,6 +19,7 @@ return [
     'moree' => 'More',
     'address' => 'Address',
     'other_regions' => 'Other regions',
+    'not_public' => 'Nothing yet.',
     'slide' => [
         'welcome' => 'Welcome to UZBEKISTAN!',
         'bukhara' => 'Bukhara is an ancient Uzbek city through which the Great Silk Road.',

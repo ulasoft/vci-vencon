@@ -28,6 +28,7 @@ return [
     'delete' => 'Удалить',
     'image' => 'Изображения',
     'lang' => 'Язык',
+    'address' => 'Адрес',
 
     'success_add' => 'Успешно добавлено',
     'success_delete' => 'Успешно удалено',
