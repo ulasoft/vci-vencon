@@ -11,15 +11,19 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::group(['prefix' => '{lang}'],function() {
+
+    Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
+
+    Route::get('/', function () {
+        return view('welcome');
+    });
+    Route::get('/home', 'HomeController@index')->name('home');
 
 
-Route::group(['prefix' => 'dashboard', 'middleware' => 'auth'],function(){
-   Route::get('/','Dashboard\IndexCtrl@index');
+    Route::group(['prefix' => 'dashboard', 'middleware' => 'admin'],function(){
+        Route::get('/','Dashboard\IndexCtrl@index');
+    });
 });

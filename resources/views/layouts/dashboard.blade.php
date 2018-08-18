@@ -55,7 +55,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </ul>
             <ul class="nav navbar-top-links navbar-right pull-right">
                 <li>
-                    <a class="profile-pic" href="#"> <img src="/vendor/admin/plugins/images/users/varun.jpg" alt="user-img" width="36" class="img-circle"><b class="hidden-xs">Steave</b> </a>
+                    <a class="profile-pic" href="#"> <img src="/vendor/admin/plugins/images/users/varun.jpg" alt="user-img" width="36" class="img-circle"><b class="hidden-xs">{{Auth::user()->name}}</b> </a>
+                </li>
+
+                <li>
+                    <a class="profile-pic" href="/ru/logout">
+                        <i class="fa fa-sign-out"></i> @lang('admin.logout')
+                    </a>
                 </li>
             </ul>
         </div>
@@ -70,17 +76,21 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <li style="padding: 10px 0 0;">
                     <a href="index.html" class="waves-effect"><i class="fa fa-clock-o fa-fw" aria-hidden="true"></i><span class="hide-menu">@lang('admin.home')</span></a>
                 </li>
-                <li>
-                    <a href="profile.html" class="waves-effect"><i class="fa fa-user fa-fw" aria-hidden="true"></i><span class="hide-menu">@lang('admin.regions')</span></a>
+                <li class="active">
+                    <a href="profile.html" class="waves-effect"><i class="fa fa-globe fa-fw" aria-hidden="true"></i><span class="hide-menu">@lang('admin.regions')</span></a>
                 </li>
                 <li>
-                    <a href="basic-table.html" class="waves-effect"><i class="fa fa-table fa-fw" aria-hidden="true"></i><span class="hide-menu">@lang('admin.hotels')</span></a>
+                    <a href="basic-table.html" class="waves-effect"><i class="fa fa-bed fa-fw" aria-hidden="true"></i><span class="hide-menu">@lang('admin.hotels')</span></a>
                 </li>
                 <li>
-                    <a href="fontawesome.html" class="waves-effect"><i class="fa fa-font fa-fw" aria-hidden="true"></i><span class="hide-menu">@lang('admin.restarans')</span></a>
+                    <a href="fontawesome.html" class="waves-effect"><i class="fa fa-cutlery fa-fw" aria-hidden="true"></i><span class="hide-menu">@lang('admin.restarans')</span></a>
                 </li>
                 <li>
-                    <a href="map-google.html" class="waves-effect"><i class="fa fa-globe fa-fw" aria-hidden="true"></i><span class="hide-menu">@lang('admin.dist')</span></a>
+                    <a href="map-google.html" class="waves-effect"><i class="fa fa-camera-retro fa-fw" aria-hidden="true"></i><span class="hide-menu">@lang('admin.dist')</span></a>
+                </li>
+
+                <li>
+                    <a href="map-google.html" class="waves-effect"><i class="fa fa-cogs fa-fw" aria-hidden="true"></i><span class="hide-menu">@lang('admin.settings')</span></a>
                 </li>
             </ul>
         </div>

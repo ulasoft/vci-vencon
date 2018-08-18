@@ -18,7 +18,6 @@ class CreateHotelsTable extends Migration
             $table->string('name');
             $table->string('poster',500);
             $table->text('full_text');
-            $table->string('slug');
             $table->string('descr');
             $table->string('keywords');
             $table->string('slug');

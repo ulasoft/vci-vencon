@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Login V15</title>
+    <title>@lang('admin.login')</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--===============================================================================================-->
@@ -43,7 +43,7 @@
                 </span>
             @endif
 
-            <form method="post" action="{{ route('login') }}" class="login100-form validate-form">
+            <form method="post" action="{{ route('login',['ru']) }}" class="login100-form validate-form">
                 @csrf
                 <div class="wrap-input100 validate-input m-b-26" data-validate="Username is required">
                     <span class="label-input100">@lang('admin.email')</span>
