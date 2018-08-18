@@ -84,10 +84,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <a href="{{Route('hotels_d',['ru'])}}" class="waves-effect"><i class="fa fa-bed fa-fw" aria-hidden="true"></i><span class="hide-menu">@lang('admin.hotels')</span></a>
                 </li>
                 <li>
-                    <a href="fontawesome.html" class="waves-effect"><i class="fa fa-cutlery fa-fw" aria-hidden="true"></i><span class="hide-menu">@lang('admin.restarans')</span></a>
+                    <a href="{{Route('res_d',['ru'])}}" class="waves-effect"><i class="fa fa-cutlery fa-fw" aria-hidden="true"></i><span class="hide-menu">@lang('admin.restarans')</span></a>
                 </li>
                 <li>
-                    <a href="map-google.html" class="waves-effect"><i class="fa fa-camera-retro fa-fw" aria-hidden="true"></i><span class="hide-menu">@lang('admin.dist')</span></a>
+                    <a href="{{Route('dis_d',['ru'])}}" class="waves-effect"><i class="fa fa-camera-retro fa-fw" aria-hidden="true"></i><span class="hide-menu">@lang('admin.dist')</span></a>
                 </li>
 
 

@@ -43,12 +43,23 @@ Route::group(['prefix' => '{lang}'],function() {
 
         Route::prefix('restaurants')->group(function(){
             Route::get('/','Dashboard\RestaurantsCtrl@index')->name('res_d');
-//            Route::get('/add','Dashboard\HotelsCtrl@add')->name('add_hotels');
-//            Route::post('/add','Dashboard\HotelsCtrl@create');
-//            Route::get('edit/{id}','Dashboard\HotelsCtrl@edit')->name('edit_hotels');
-//            Route::post('edit/{id}','Dashboard\HotelsCtrl@update')->name('update_hotels');
-//            Route::get('delete/{id}','Dashboard\HotelsCtrl@delete')->name('delete_hotels');
+            Route::get('/add','Dashboard\RestaurantsCtrl@add')->name('add_res');
+            Route::post('/add','Dashboard\RestaurantsCtrl@create');
+            Route::get('edit/{id}','Dashboard\RestaurantsCtrl@edit')->name('edit_res');
+            Route::post('edit/{id}','Dashboard\RestaurantsCtrl@update')->name('update_res');
+            Route::get('delete/{id}','Dashboard\RestaurantsCtrl@delete')->name('delete_res');
         });
+
+        Route::prefix('distinctions')->group(function(){
+            Route::get('/','Dashboard\DistinctionsCtrl@index')->name('dis_d');
+//            Route::get('/add','Dashboard\RestaurantsCtrl@add')->name('add_res');
+//            Route::post('/add','Dashboard\RestaurantsCtrl@create');
+//            Route::get('edit/{id}','Dashboard\RestaurantsCtrl@edit')->name('edit_res');
+//            Route::post('edit/{id}','Dashboard\RestaurantsCtrl@update')->name('update_res');
+//            Route::get('delete/{id}','Dashboard\RestaurantsCtrl@delete')->name('delete_res');
+        });
+
+
 
 
 
