@@ -81,7 +81,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <a href="{{Route('regions_d',['ru'])}}" class="waves-effect"><i class="fa fa-globe fa-fw" aria-hidden="true"></i><span class="hide-menu">@lang('admin.regions')</span></a>
                 </li>
                 <li>
-                    <a href="basic-table.html" class="waves-effect"><i class="fa fa-bed fa-fw" aria-hidden="true"></i><span class="hide-menu">@lang('admin.hotels')</span></a>
+                    <a href="{{Route('hotels_d',['ru'])}}" class="waves-effect"><i class="fa fa-bed fa-fw" aria-hidden="true"></i><span class="hide-menu">@lang('admin.hotels')</span></a>
                 </li>
                 <li>
                     <a href="fontawesome.html" class="waves-effect"><i class="fa fa-cutlery fa-fw" aria-hidden="true"></i><span class="hide-menu">@lang('admin.restarans')</span></a>
@@ -92,7 +92,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
 
                 <li class="">
-                    <a href="#" class="waves-effect">
+                    <a href="/settings" class="waves-effect">
                         <i data-icon="7" class="fa fa-cogs fa-fw"></i> <span class="hide-menu">@lang('admin.settings')<span class="fa arrow"></span></span>
                     </a>
                     <ul class="nav nav-second-level collapse" aria-expanded="false" style="height: 0px;">

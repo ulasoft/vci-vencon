@@ -12,7 +12,7 @@
                         <li role="presentation" class=""><a href="#messages1" aria-controls="messages" role="tab" data-toggle="tab" aria-expanded="false"><span class="visible-xs"><i class="ti-email"></i></span> <span class="hidden-xs">EN</span></a></li>
                     </ul>
                     <div class="panel-body">
-                        <form action="{{Route('create_regions',['ru'])}}"  enctype="multipart/form-data"  method="post" class="form-horizontal form-bordered">
+                        <form action="{{Route('update_regions',['ru',$data->id])}}"  enctype="multipart/form-data"  method="post" class="form-horizontal form-bordered">
                             @csrf
                             <div class="tab-content m-t-0">
                                 <div role="tabpanel" class="tab-pane fade active in" id="home1">

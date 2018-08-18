@@ -61,7 +61,7 @@ class RegionsCtrl extends Controller
         return view('dashboard.regions.edit',compact('data'));
     }
 
-    public function updage($lang, $id, Request $req)
+    public function update($lang, $id, Request $req)
     {
         $r = Region::find($id);
         $r->name_uz = $req->name_uz;
