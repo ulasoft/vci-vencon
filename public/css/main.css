@@ -19,6 +19,36 @@
 	opacity: 1;
 }
 
+figure.effect-roxy figcaption::before {
+	position: absolute;
+	top: 30px;
+	right: 30px;
+	bottom: 30px;
+	left: 30px;
+	border: 1px solid #fff;
+	content: '';
+	opacity: 1;
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+
+.section05 {
+	padding: 3rem 0 3rem 0;
+	position: relative;
+	top: 100px;
+}
+
+.section06 {
+	position: relative;
+	background: url(../img/bgsection.jpg) no-repeat fixed;
+	-webkit-background-size: cover;
+	background-size: cover;
+	padding: 15rem 0;
+	display: none;
+}
+
 .main-ul li a {
 	font-size: 18px;
 	font-weight: bold;
