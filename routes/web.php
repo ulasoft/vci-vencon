@@ -13,10 +13,14 @@
 
 Auth::routes();
 
+Route::get('/', 'Site\IndexCtrl@index')->middleware('lang');
+
 Route::group(['prefix' => '{lang}'],function() {
-    Route::get('/', function () {
-        return view('welcome');
+    Route::prefix('/')->group(function(){
+        Route::get('/', 'Site\IndexCtrl@index');
+        Route::get('hotels','Site\HotelsCtrl@index')->name('hotels');
     });
+
     Route::get('/home', 'HomeController@index')->name('home');
 
 
