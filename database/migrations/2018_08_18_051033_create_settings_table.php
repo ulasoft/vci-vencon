@@ -18,16 +18,16 @@ class CreateSettingsTable extends Migration
             $table->string('title_uz');
             $table->string('title_ru');
             $table->string('title_en');
-            $table->string('descr_en',1000);
-            $table->string('descr_ru',1000);
-            $table->string('descr_uz',1000);
-            $table->string('keywords_en',1000);
-            $table->string('keywords_ru',1000);
-            $table->string('keywords_uz',1000);
-            $table->string('fb_link',1000);
-            $table->string('vk_link',1000);
-            $table->string('youtube_link',1000);
-            $table->string('instagram_link',1000);
+            $table->string('descr_en',1000)->nullable();
+            $table->string('descr_ru',1000)->nullable();
+            $table->string('descr_uz',1000)->nullable();
+            $table->string('keywords_en',1000)->nullable();
+            $table->string('keywords_ru',1000)->nullable();
+            $table->string('keywords_uz',1000)->nullable();
+            $table->string('fb_link',1000)->nullable();
+            $table->string('vk_link',1000)->nullable();
+            $table->string('youtube_link',1000)->nullable();
+            $table->string('instagram_link',1000)->nullable();
             $table->timestamps();
         });
     }

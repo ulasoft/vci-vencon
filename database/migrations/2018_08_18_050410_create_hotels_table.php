@@ -16,10 +16,10 @@ class CreateHotelsTable extends Migration
         Schema::create('hotels', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->string('poster',500);
-            $table->text('full_text');
-            $table->string('descr');
-            $table->string('keywords');
+            $table->string('poster',500)->nullable();
+            $table->text('full_text')->nullable();
+            $table->string('descr')->nullable();
+            $table->string('keywords')->nullable();
             $table->string('slug');
             $table->integer('moder')->default(0);
             $table->string('lang');

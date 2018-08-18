@@ -52,11 +52,11 @@ Route::group(['prefix' => '{lang}'],function() {
 
         Route::prefix('distinctions')->group(function(){
             Route::get('/','Dashboard\DistinctionsCtrl@index')->name('dis_d');
-//            Route::get('/add','Dashboard\RestaurantsCtrl@add')->name('add_res');
-//            Route::post('/add','Dashboard\RestaurantsCtrl@create');
-//            Route::get('edit/{id}','Dashboard\RestaurantsCtrl@edit')->name('edit_res');
-//            Route::post('edit/{id}','Dashboard\RestaurantsCtrl@update')->name('update_res');
-//            Route::get('delete/{id}','Dashboard\RestaurantsCtrl@delete')->name('delete_res');
+            Route::get('/add','Dashboard\DistinctionsCtrl@add')->name('add_dis');
+            Route::post('/add','Dashboard\DistinctionsCtrl@create');
+            Route::get('edit/{id}','Dashboard\DistinctionsCtrl@edit')->name('edit_dis');
+            Route::post('edit/{id}','Dashboard\DistinctionsCtrl@update')->name('update_dis');
+            Route::get('delete/{id}','Dashboard\DistinctionsCtrl@delete')->name('delete_dis');
         });
 
 

@@ -16,11 +16,11 @@ class CreateDistinctionsTable extends Migration
         Schema::create('distinctions', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->string('poster',500);
-            $table->text('full_text',500);
+            $table->string('poster',500)->nullable();
+            $table->text('full_text',500)->nullable();
             $table->string('slug',500);
-            $table->string('descr',500);
-            $table->string('keywords',500);
+            $table->string('descr',500)->nullable();
+            $table->string('keywords',500)->nullable();
             $table->string('lang',3);
             $table->integer('moder')->default(0);
             $table->timestamps();
