@@ -59,6 +59,12 @@ Route::group(['prefix' => '{lang}'],function() {
             Route::get('delete/{id}','Dashboard\DistinctionsCtrl@delete')->name('delete_dis');
         });
 
+        Route::prefix('settings')->group(function(){
+            Route::get('/','Dashboard\SettingsCtrl@index')->name('settings');
+            Route::post('/add','Dashboard\SettingsCtrl@update');
+
+        });
+
 
 
 

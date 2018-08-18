@@ -96,7 +96,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         <i data-icon="7" class="fa fa-cogs fa-fw"></i> <span class="hide-menu">@lang('admin.settings')<span class="fa arrow"></span></span>
                     </a>
                     <ul class="nav nav-second-level collapse" aria-expanded="false" style="height: 0px;">
-                        <li> <a href="fontawesome.html"><i class="fa fa-cog fa-fw"></i>  @lang('admin.settings')</a> </li>
+                        <li> <a href="{{Route('settings',['ru'])}}"><i class="fa fa-cog fa-fw"></i>  @lang('admin.settings')</a> </li>
                         <li> <a href="themifyicon.html"><i class="fa fa-facebook-official fa-fw"></i> @lang('admin.fb')</a> </li>
                         <li> <a href="simple-line.html"><i class="fa fa-instagram fa-fw"></i>  @lang('admin.instagram')</a> </li>
                         <li><a href="linea-icon.html"><i class="fa fa-youtube-square fa-fw"></i> @lang('admin.youtube')</a></li>

@@ -52,7 +52,7 @@
         <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
             <ol class="breadcrumb">
                 <li><a href="{{Route('dashboard',['ru'])}}">@lang('admin.home')</a></li>
-                <li class="active">@lang('admin.restarans')</li>
+                <li class="active">@lang('admin.dist')</li>
             </ol>
         </div>
     </div>

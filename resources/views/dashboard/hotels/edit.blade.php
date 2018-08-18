@@ -4,7 +4,7 @@
     <div class="row">
         <div class="col-md-12">
             <div class="panel panel-info">
-                <div class="panel-heading"> @lang('admin.add')</div>
+                <div class="panel-heading"> @lang('admin.edit')</div>
                 <div class="panel-wrapper collapse in" aria-expanded="true">
                     <div class="panel-body">
                         <form action="{{Route('update_hotels',['ru',$data->id])}}" method="post" enctype="multipart/form-data" class="form-horizontal form-bordered">
@@ -62,11 +62,11 @@
 @section('title')
     <div class="row bg-title">
         <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
-            <h4 class="page-title">@lang('admin.add') </h4> </div>
+            <h4 class="page-title">@lang('admin.hotels') </h4> </div>
         <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
             <ol class="breadcrumb">
                 <li><a href="{{Route('dashboard',['ru'])}}">@lang('admin.home')</a></li>
-                <li class="active">@lang('admin.regions')</li>
+                <li class="active">@lang('admin.hotels')</li>
             </ol>
         </div>
     </div>
